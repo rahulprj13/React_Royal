@@ -11,7 +11,7 @@ function App() {
     {/* <Mapdemo1/> */}'
     {/* <Mapdemo2/> */}
     {/* <Mapdemo3/> */}
-    <Mapdemo4/>
+    {/* <Mapdemo4/> */}
     </>
   )
 }

@@ -43,6 +43,13 @@ const Navbar = () => {
               <Link className="nav-link text-white" to="/usedemo3">Usedemo3</Link>
             </li>
 
+            <li className="nav-item">
+              <Link className="nav-link text-white" to="/employee">Employee</Link>
+            </li>
+            {/* <li className="nav-item">
+              <Link className="nav-link text-white" to="/cardcomponent">CardComponent</Link>
+            </li> */}
+
           </ul>
         </div>
       </div>

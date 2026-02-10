@@ -11,6 +11,9 @@ import Iplteam from "./Component/Iplteam"
 import Usedemo1 from "./Component/Usedemo1"
 import Usedemo2 from "./Component/Usedemo2"
 import Usedemo3 from "./Component/Usedemo3"
+import Employee from "./Component/Employee"
+import CardComponent from "./Component/CardComponent"
+
 
 
 function App() {
@@ -32,6 +35,8 @@ function App() {
         <Route path="/usedemo1" element={<Usedemo1/>} />
         <Route path="/usedemo2" element={<Usedemo2/>} />
         <Route path="/usedemo3" element={<Usedemo3/>} />
+        <Route path="/employee" element={<Employee/>} />
+        {/* <Route path="/cardcomponent" element={<CardComponent title="cards" desc="this is card description"/>} /> */}
         <Route path="/*" element={<NetflixError/>} />
         
       </Routes>

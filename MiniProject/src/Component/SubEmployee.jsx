@@ -7,7 +7,6 @@ const SubEmployee = (props) => {
       <h1>SubEmployee</h1>
       {props.title}
 
-    {/* <CardComponent title="advanture" /> */}
 
     </div>
   )

@@ -13,6 +13,8 @@ import Usedemo2 from "./Component/Usedemo2"
 import Usedemo3 from "./Component/Usedemo3"
 import Employee from "./Component/Employee"
 import CardComponent from "./Component/CardComponent"
+import FormHandling from "./Component/Form/FormHandling"
+import Dropdown from "./Component/Form/Dropdown"
 
 
 
@@ -36,6 +38,8 @@ function App() {
         <Route path="/usedemo2" element={<Usedemo2/>} />
         <Route path="/usedemo3" element={<Usedemo3/>} />
         <Route path="/employee" element={<Employee/>} />
+        <Route path="/form" element={<FormHandling/>} />
+        <Route path="/country" element={<Dropdown/>} />
         {/* <Route path="/cardcomponent" element={<CardComponent title="cards" desc="this is card description"/>} /> */}
         <Route path="/*" element={<NetflixError/>} />
         

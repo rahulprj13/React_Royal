@@ -52,6 +52,9 @@ const Navbar = () => {
             <li className="nav-item">
               <Link className="nav-link text-white" to="/country">country</Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link text-white" to="/formvalidate">Formvalidate</Link>
+            </li>
 
           </ul>
         </div>

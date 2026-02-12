@@ -15,6 +15,7 @@ import Employee from "./Component/Employee"
 import CardComponent from "./Component/CardComponent"
 import FormHandling from "./Component/Form/FormHandling"
 import Dropdown from "./Component/Form/Dropdown"
+import Formvalidation from "./Component/Form/Formvalidation"
 
 
 
@@ -40,6 +41,7 @@ function App() {
         <Route path="/employee" element={<Employee/>} />
         <Route path="/form" element={<FormHandling/>} />
         <Route path="/country" element={<Dropdown/>} />
+        <Route path="/formvalidate" element={<Formvalidation/>} />
         {/* <Route path="/cardcomponent" element={<CardComponent title="cards" desc="this is card description"/>} /> */}
         <Route path="/*" element={<NetflixError/>} />
         

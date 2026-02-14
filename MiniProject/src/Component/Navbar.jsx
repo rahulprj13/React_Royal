@@ -11,7 +11,7 @@ const Navbar = () => {
 
           <ul className="navbar-nav ms-auto">
 
-            <li className="nav-item me-3">
+            {/* <li className="nav-item me-3">
               <Link className="nav-link text-white" to="/netflixhome">Home</Link>
             </li>
 
@@ -41,7 +41,7 @@ const Navbar = () => {
 
             <li className="nav-item">
               <Link className="nav-link text-white" to="/usedemo3">Usedemo3</Link>
-            </li>
+            </li> */}
 
             <li className="nav-item">
               <Link className="nav-link text-white" to="/employee">Employee</Link>

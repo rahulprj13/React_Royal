@@ -113,6 +113,7 @@ const Formvalidation = () => {
     const error = {
         color: "red"
     }
+    
     return (
         <div style={{ textAlign: "center" }}>
             <h1>Form Validation Component</h1>

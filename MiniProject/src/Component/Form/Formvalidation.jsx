@@ -124,13 +124,16 @@ const Formvalidation = () => {
                 email: <input type="email" placeholder='enter your email' {...register('email', validationSchema.Emailvalidate)}  />
                 <p style={error}>{errors.email && errors.email.message}</p><br />
 
-                password: <input type="password" placeholder='enter password' {...register("password",validationSchema.passwordvalidate)}/>
-                <p style={error}>{errors.password?.message}</p><br/>
-                <ul>
-                    {passwordRules.map((rule) =>{
-                        return <h5 style={{color:rule.test?"green":"black"}} >{rule.label}</h5>
-                    })}    
-                </ul>
+                password: <input type="password" placeholder='enter password' {...register("password",validationSchema.passwordvalidate)} onFocus={setIsset}/>
+                <p style={error}>{errors.password?.message}</p>
+                {isset &&(                
+                    <ul>
+                        {passwordRules.map((rule) =>{
+                            return <h5 style={{color:rule.test?"green":"black"}} >{rule.label}</h5>
+                        })}    
+                    </ul>
+                )}
+
 
                 confpassword: <input type="password" placeholder='enter confirmpassword' {...register("confpassword", validationSchema.confpasswordvalidate)} />
                 <p style={error}>{errors.confpassword?.message}</p>
@@ -146,7 +149,7 @@ const Formvalidation = () => {
 
             </form>
 
-            {isset == true &&
+            {isset &&
                 <div>
                     <h3>{userdata.name}</h3>
                     <h3>{userdata.email}</h3>

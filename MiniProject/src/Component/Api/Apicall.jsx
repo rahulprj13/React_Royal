@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import Productcalli from './Productcalli'
 
 const Apicall = () => {
 
@@ -11,7 +12,6 @@ const Apicall = () => {
 
         const response = await axios.get("https://node5.onrender.com/user/user/")
         console.log(response);
-
         console.log(response.data.message)
         setMessage(response.data.message)
         setUsers(response.data.data)
@@ -61,6 +61,8 @@ const Apicall = () => {
 
                 </table>
             }
+
+            <Productcalli/>
         </div>
     )
 }

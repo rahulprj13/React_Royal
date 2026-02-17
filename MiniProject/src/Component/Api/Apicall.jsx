@@ -27,8 +27,6 @@ const Apicall = () => {
             {show &&
                 <table className="table" >
 
-
-
                     <thead >
 
                         <tr>

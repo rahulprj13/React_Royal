@@ -56,6 +56,10 @@ const Navbar = () => {
               <Link className="nav-link text-white" to="/formvalidate">Formvalidate</Link>
             </li>
 
+            <li className="nav-item">
+              <Link className="nav-link text-white" to="/api">Api</Link>
+            </li>
+
           </ul>
         </div>
       </div>

@@ -16,6 +16,7 @@ import CardComponent from "./Component/CardComponent"
 import FormHandling from "./Component/Form/FormHandling"
 import Dropdown from "./Component/Form/Dropdown"
 import Formvalidation from "./Component/Form/Formvalidation"
+import Apicall from "./Component/Api/Apicall"
 
 
 
@@ -42,6 +43,7 @@ function App() {
         <Route path="/form" element={<FormHandling/>} />
         <Route path="/country" element={<Dropdown/>} />
         <Route path="/formvalidate" element={<Formvalidation/>} />
+        <Route path="/api" element={<Apicall/>} />
         {/* <Route path="/cardcomponent" element={<CardComponent title="cards" desc="this is card description"/>} /> */}
         <Route path="/*" element={<NetflixError/>} />
         

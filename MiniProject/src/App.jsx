@@ -17,6 +17,8 @@ import FormHandling from "./Component/Form/FormHandling"
 import Dropdown from "./Component/Form/Dropdown"
 import Formvalidation from "./Component/Form/Formvalidation"
 import Apicall from "./Component/Api/Apicall"
+import MovieDetail from "./Component/Api/MovieDetail"
+import MovieGrid from "./Component/Api/MovieGrid"
 
 
 
@@ -44,6 +46,8 @@ function App() {
         <Route path="/country" element={<Dropdown/>} />
         <Route path="/formvalidate" element={<Formvalidation/>} />
         <Route path="/api" element={<Apicall/>} />
+        <Route path="/moviegrid" element={<MovieGrid/>} />
+        <Route path="/movie/:id" element={<MovieDetail/>} />
         {/* <Route path="/cardcomponent" element={<CardComponent title="cards" desc="this is card description"/>} /> */}
         <Route path="/*" element={<NetflixError/>} />
         

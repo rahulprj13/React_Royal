@@ -1,5 +1,8 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import MoviesApi from './MoviesApi'
+import MovieGrid from './MovieGrid'
+import PostApi from './PostApi'
 
 const Productcalli = () => {
 
@@ -44,6 +47,9 @@ const Productcalli = () => {
         </tbody>
       </table>
 }
+{/* <MoviesApi/> */}
+{/* <MovieGrid/> */}
+    <PostApi/>
     </div>
   )
 }

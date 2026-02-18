@@ -18,9 +18,7 @@ const MovieGrid = () => {
       return;
     }
 
-    const res = await axios.get(
-      `https://www.omdbapi.com/?apikey=749ddc01&s=${moviename}`
-    );
+    const res = await axios.get(`https://www.omdbapi.com/?apikey=749ddc01&s=${moviename}`)
     console.log(res.data);
     
 

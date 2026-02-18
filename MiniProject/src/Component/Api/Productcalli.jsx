@@ -7,7 +7,7 @@ import PostApi from './PostApi'
 const Productcalli = () => {
 
     const [products, setProducts] = useState([])
-    const [show, setShow] = useState(false)
+    // const [show, setShow] = useState(false)
 
     const getProduct = async() => {
         const response = await axios.get("https://dummyjson.com/products")

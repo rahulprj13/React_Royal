@@ -10,7 +10,6 @@ const MovieGrid = () => {
 
   const navigate = useNavigate();
 
-  // ✅ Simple async function
   const fetchMovies = async (moviename) => {
 
     if (search === "") {
@@ -42,7 +41,6 @@ const MovieGrid = () => {
     <div style={{ padding: "20px" }}>
       <h2>Search Movies</h2>
 
-      {/* Input */}
       <input
         type="text"
         placeholder="Enter movie name"
@@ -51,15 +49,12 @@ const MovieGrid = () => {
         style={{ padding: "10px", marginRight: "10px" }}
       />
 
-      {/* Button */}
       <button onClick={()=>{fetchMovies(search)}} style={{ padding: "10px" }}>
         Search
       </button>
 
-      {/* Message */}
       <h3 style={{ color: "red" }}>{message}</h3>
 
-      {/* Movie Grid */}
       <div
         style={{
           display: "grid",

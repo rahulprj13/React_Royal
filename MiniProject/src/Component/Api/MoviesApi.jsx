@@ -32,7 +32,7 @@ const MoviesApi = () => {
                                 return (
                                     <tr key={movie.id}>
                                         <td>{movie.imdbID}</td>
-                                        <td>{movie.Title}</td>
+<td>{movie.Title}</td>
                                         <td>{movie.Year}</td>
                                         <img src={movie.Poster}></img>
                                     </tr>
@@ -44,6 +44,6 @@ const MoviesApi = () => {
             }
         </div>
     )
-}
+}                                        
 
 export default MoviesApi

@@ -63,6 +63,8 @@ const Navbar = () => {
             <li className="nav-item">
               <Link className="nav-link text-white" to="/moviegrid">Movie</Link>
             </li>
+            
+            
 
           </ul>
         </div>

@@ -20,21 +20,25 @@ const MovieDetail = () => {
         fetchMovie()
     }
 
-    if (!movie) {
-    return <h2 style={{ textAlign: "center" }}>Loading...</h2>;
-  }
+//     if (!movie) {
+//     return <h2 style={{ textAlign: "center" }}>Loading...</h2>;
+//   }
   return (
+    
     <div style={{ padding: "40px" }}>
-        {/* <button onClick={() => window.history.back()}>Go Back</button> */}
+        {movie ? (
+            <div>
 
+        {/* <button onClick={() => window.history.back()}>Go Back</button> */}
+    
         <button 
         onClick={() => navigate(-1)}
         style={{
-          padding: "8px 15px",
-          cursor: "pointer",
-          marginBottom: "20px"
+            padding: "8px 15px",
+            cursor: "pointer",
+            marginBottom: "20px"
         }}
-      >
+        >
          Go Back
       </button>
       <h1>{movie.Title}</h1>
@@ -45,6 +49,8 @@ const MovieDetail = () => {
       <p><b>Genre:</b> {movie.Genre}</p>
       <p><b>Actors:</b> {movie.Actors}</p>
       <p><b>Plot:</b> {movie.Plot}</p>
+          </div>
+      ):(<h2>data not found...</h2>)}
     </div>
   );
 };

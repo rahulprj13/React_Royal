@@ -1,12 +1,71 @@
-import axios from 'axios';
-import React from 'react'
-import { useForm } from 'react-hook-form';
-//
+import axios from "axios";
+import React from "react";
+import { useForm } from "react-hook-form";
+import GetApi from "./GetApi";
+
 const PostApi = () => {
 
-    const {register, handleSubmit} = useForm()
+  const { register, handleSubmit } = useForm();
 
-    // const adduser = async () => {
+  const submitHandler = async (data) => {
+
+    const userData = {
+      name: data.name,
+      age: Number(data.age),   // number me convert
+      email: data.email,
+      password: data.password,
+      isActive: data.isActive ? true : false
+    };
+
+    console.log("Sending Data:", userData);
+
+    try {
+
+      const response = await axios.post("https://node5.onrender.com/user/user/",userData);
+
+      alert("User Added Successfully");
+      console.log(response.data);
+
+    } catch (error) {
+      console.log("Error:", error);
+      alert("Something went wrong");
+    }
+  };
+
+  return (
+    <div style={{ textAlign: "center" }}>
+      <h1>Post Api</h1>
+
+      <form onSubmit={handleSubmit(submitHandler)}>
+        <br />
+        Name: <input type="text" {...register("name")} />
+        <br /><br />
+
+        Age: <input type="number" {...register("age")} />
+        <br /><br />
+
+        Email: <input type="email" {...register("email")} />
+        <br /><br />
+
+        Password: <input type="password" {...register("password")} />
+        <br /><br />
+
+        IsActive: <input type="checkbox" {...register("isActive")} />
+        <br /><br />
+
+        <button type="submit">Add User</button>
+      </form>
+
+      <GetApi />
+    </div>
+  );
+};
+
+export default PostApi;
+
+
+
+// const adduser = async () => {
 
     //     const userobj = {
     //         name: "rahul",
@@ -27,27 +86,3 @@ const PostApi = () => {
     //         alert("something went wrong")
     //     }
     // }
-
-    const submitHandler = async(data)=>{
-        const res = await axios.post("https://node5.onrender.com/user/user/", data)
-        console.log(res);
-        console.log(res.data);
-        console.log(data);
-    }
-
-    return (
-        <div style={{textAlign:"center"}}>
-            <h1>Post Api</h1>
-            <form action="" onSubmit={handleSubmit(submitHandler)}>
-                Name: <input type="text" placeholder='enter your name' {...register("name")}/><br />
-                Age: <input type="number" placeholder='enter your age' {...register("age")}/><br />
-                Email: <input type="email" placeholder='enter your email' {...register("email")}/><br />
-                Password: <input type="password" placeholder='enter your password' {...register("password")}/><br />
-                IsActive: <input type="checkbox" {...register("isActive")}/><br />
-                <button type='submit'>adduser</button>
-            </form>
-        </div>
-    )
-}
-
-export default PostApi
